@@ -22,4 +22,9 @@ public class MainServiceImpl {
 		System.out.println("service select >>> ");
 		return dao.selectRow();
 	}
+	
+	public List<Object> bbsSelect() {
+		System.out.println("service bbsSelect >>> ");
+		return dao.bbsSelectRow();
+	}
 }

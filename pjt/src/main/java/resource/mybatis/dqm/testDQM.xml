@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- namespace : 여러 DQM 구분할 수 있어야 한다. (패키지 이름처럼) xml 식별자 역할 -->
+<mapper namespace="kbstar.bbs">
+
+	<!--  SQL 구문이 DAO에서 빠져서 이쪽으로 들어옴  -->
+	<!--  resultType="bbs" -> configuration.xml 에서 지정했던 타입 알리아스 -->
+	<select id="listRow" resultType="bbs">
+	
+		<!--  DAO쪽에 가면 session.selectXX("kbstar.bbs.listRow", dto) 이런식으로 되어있을 때 -> namespace와 id로 찾아옴 -->
+		<!--  세미콜론(;) 절대 금지!!!  -->
+		SELECT 	IDX, SUBJECT, CONTENT, WRITER, REGDATE, CNT
+		FROM 	BBS_TBL
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

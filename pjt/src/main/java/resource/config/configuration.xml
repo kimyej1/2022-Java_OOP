@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<typeAliases>
+		<!-- DTO/VO 경로가 너무 기니까 별명을 지정할래 -> VO가 10개면 10개 지정 가능! -->
+		<!-- .으로 이어지는건 소스코드 패키지 경로, /로 이어지는건 디렉토리 경로 -->
+		<typeAlias 	type="bbs.model.vo.BbsVO"
+					alias="bbs" /> 
+	</typeAliases>	
+
+  
+  <environments default="">
+    <environment id="">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe" />
+		<property name="username" value="hr" />
+		<property name="password" value="hr" />
+      </dataSource>
+    </environment>
+  </environments>
+  
+	<mappers>
+		<mapper resource="resource/mybatis/dqm/testDQM.xml"/>
+	</mappers>
+
+</configuration>
+
+

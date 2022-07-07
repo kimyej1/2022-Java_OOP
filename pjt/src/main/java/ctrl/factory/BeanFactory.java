@@ -3,6 +3,8 @@ package ctrl.factory;
 import java.util.HashMap;
 import java.util.Map;
 
+import bbs.ctrl.BbsCtrl;
+import bbs.ctrl.BbsReadCtrl;
 import ctrl.util.Controller;
 import user.ctrl.LoginCtrl;
 import user.ctrl.LogoutCtrl;
@@ -19,6 +21,8 @@ public class BeanFactory {
 		map.put("/pjt/logout.kbstar", new LogoutCtrl());
 		map.put("/pjt/join.kbstar", new RegisterCtrl());
 		map.put("/pjt/main.kbstar", new MainCtrl());
+		map.put("/pjt/bbs_list.kbstar", new BbsCtrl());
+		map.put("/pjt/bbs_read.kbstar", new BbsReadCtrl());
 	}
 	
 	public static BeanFactory getInstance() {	// 인스턴스를 생성하지 못하게 해놨기 때문에, public이어도 외부에서 접근 불가 

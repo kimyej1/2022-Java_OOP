@@ -3,6 +3,7 @@ package intro.model.sql;
 import java.util.ArrayList;
 import java.util.List;
 
+import bbs.model.vo.BbsVO;
 import intro.news.NewsVO;
 
 public class MainDaoImpl {
@@ -18,6 +19,16 @@ public class MainDaoImpl {
 		list.add(new NewsVO(1, "³»ÀÏ ÈŞ°­ÀÔ´Ï´Ù."));
 		list.add(new NewsVO(2, "»½ÀÌ¾ß!"));
 		list.add(new NewsVO(3, "Ç÷¸Æ°­»ç Â¯!!"));
+		
+		return list;
+	}
+	
+	public List<Object> bbsSelectRow() {	// ArrayList<BbsVO>
+		System.out.println("dao bbsSelectRow >>> ");
+		
+		list = new ArrayList<Object>();
+		list.add(new BbsVO(1, "ÈŞ°­°øÁö", "³»ÀÏ ÈŞ°­ÀÔ´Ï´Ù.", "admin", "2022-07-07", 0));
+		list.add(new BbsVO(2, "È¸½Ä°øÁö", "»½!", "admin", "2022-07-06", 5));
 		
 		return list;
 	}
